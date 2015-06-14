@@ -32,7 +32,9 @@
 	struct DDCWriteCommand write_command;
 	write_command.control_id = control;
 	write_command.new_value = value;
-	ddc_write(0, &write_command);
+    
+    ddc_write(1, &write_command);
+    ddc_write(0, &write_command);
 }
 
 - (id)init{
